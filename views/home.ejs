@@ -1,0 +1,15 @@
+<%- include("partials/header") -%>
+
+        <h1>Home</h1>
+        <p><%= homeStarting %></p>
+        <div class="postSectionHome">
+            <%for(let i=0; i<postsArr.length; i++){%>
+                <%let numOfChars = 100; let previewContent = (postsArr[i].content).substring(0,numOfChars); let url = "/posts/"+(((postsArr[i].title).trim()).replace(/[\s_]+/g,'-')).toLowerCase();%>
+                <div class="postPreview">
+                    <h3><%= postsArr[i].title %></h3>
+                    <p><%= previewContent %>... <a href=<%= url %> class="more">More</a></p>
+                </div>
+            <%}%>
+        </div>
+    
+<%- include("partials/footer") -%>

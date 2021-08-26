@@ -1,0 +1,70 @@
+/* fonts: quicksand , righteous */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Righteous&display=swap');
+
+:root {
+    --navyBlue: #055052;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.container{
+    font-size: 15px;
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    /* font-size: 15px; */
+    letter-spacing: 4px;
+}
+
+.navbar-brand{
+    font-size: 25px;
+}
+
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+.myNavColour{
+    background-color: #F5F3FF;
+}
+
+
+.postSectionHome{
+    margin: 2rem 1rem 1rem 1rem;
+}
+
+
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+    font-family: 'Righteous', cursive;
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+    left: 0;
+	width: 100%;
+	height: 50px;
+    /* color: beige; */
+    background-color: var(--navyBlue);
+	/* background-color: #1abc9c; */
+}
+
+.footer p {
+	margin-top: 20px;
+	font-size: 15px;
+    color: beige;
+}
