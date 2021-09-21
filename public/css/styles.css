@@ -147,7 +147,7 @@ body{
     align-items: center;
     justify-content: space-between;
 	width: 100%;
-	height: 150px;
+	/* height: 150px; */
     padding: 2rem;
     color: beige;
     display: flex;
