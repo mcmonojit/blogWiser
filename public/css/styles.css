@@ -147,11 +147,7 @@ body{
     align-items: center;
     justify-content: space-between;
 	width: 100%;
-<<<<<<< HEAD
-	height: 150px;
-=======
-	height: 150px;
->>>>>>> 2a3e59737488d68e5f95f1f11abefce4ba8636e7
+	/* height: 150px; */
     padding: 2rem;
     color: beige;
     display: flex;
