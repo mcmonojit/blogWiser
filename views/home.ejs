@@ -1,15 +1,36 @@
 <%- include("partials/header") -%>
 
-        <h1>Home</h1>
-        <p><%= homeStarting %></p>
+        <!-- <h1>Home</h1> -->
+        <div class="homeStarting">
+            <p><%= homeStarting %></p>
+        </div>
+
+        <div class="composeAndSearchBox">
+            <a href="/compose"><button class="btn btn-primary pen mr-sm-5">Compose new blog</button></a>
+            
+            <form action="/search" method="POST">
+                <div class="searchBox form-group search-form d-inline-flex">
+                    <div class="searchInput">
+                    <input class="form-control" type="text" name="query" placeholder="Search for blogs..." value="<%= search %>"  required></input>
+                    </div>
+                    <button class="btn btn-primary  search ml-2" >Search</button>
+                </div>
+            </form>
+        </div>
+
         <div class="postSectionHome">
             <%for(let i=0; i<postsArr.length; i++){%>
-                <%let numOfChars = 100; let previewContent = (postsArr[i].content).substring(0,numOfChars); let url = "/posts/"+(((postsArr[i].title).trim()).replace(/[\s_]+/g,'-')).toLowerCase();%>
-                <div class="postPreview">
-                    <h3><%= postsArr[i].title %></h3>
-                    <p><%= previewContent %>... <a href=<%= url %> class="more">More</a></p>
+                <div class="postPreviewCard">
+                    <h1> <%= postsArr[i].blogTitle %> </h1>
+                    <p class="post-date-font">Published by <%= postsArr[i].author %> on <%= postsArr[i].date.substring(4,15) %> </p>
+                    <hr/>
+                    <%let url = "/posts/"+((((postsArr[i].blogTitle).trim()).replace(/[\s_]+/g,'-')).toLowerCase())+"-"+(postsArr[i]._id);%>
+                    <p>
+                        <%= postsArr[i].blogContent.substring(0,50)+"..." %> 
+                        <a href="<%= url %>" class="more">Read More</a>
+                    </p>
                 </div>
             <%}%>
         </div>
-    
+
 <%- include("partials/footer") -%>
